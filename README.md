@@ -56,6 +56,8 @@ The pretrained models on ShapeNet are available as follows:
 - [UMIFormer](https://drive.google.com/file/d/1kgqhxsm-H3MCCjYz5Ur1Hlmt6onYCn_g/view?usp=share_link)
 - [UMIFormer+](https://drive.google.com/file/d/1bg97EPC5KDkRxtgasNhhK5wk1TZGrU1P/view?usp=share_link)
 
+Please download them and put into `./pths/`
+
 ## Prerequisites
 
 #### Clone the Code Repository
@@ -64,7 +66,7 @@ The pretrained models on ShapeNet are available as follows:
 git clone https://github.com/GaryZhu1996/UMIFormer
 ```
 
-#### Install Python Denpendencies
+#### Install Python Dependencies
 
 ```
 cd UMIFormer
@@ -81,7 +83,7 @@ Modify `__C.DATASETS.SHAPENET.RENDERING_PATH` and `__C.DATASETS.SHAPENET.VOXEL_P
 For training, please use the following command:
 
 ```
-CUDA_VISIBLE_DEVICES=gpu_ids torchrun --nproc_per_node=num_of_gpu runner.py
+CUDA_VISIBLE_DEVICES=gpu_ids python -m torch.distributed.launch --nproc_per_node=num_of_gpu runner.py
 ```
 
 For testing, please follow the steps below:
@@ -89,11 +91,11 @@ For testing, please follow the steps below:
 1. Update the setting of `__C.CONST.WEIGHTS` in `config.py` as the path of the reconstruction model;
 2. Run the following command to evaluate the performance of the model when facing the number of input views defined by __C.CONST.N_VIEWS_RENDERING in config.py:
 ```
-CUDA_VISIBLE_DEVICES=gpu_ids torchrun --nproc_per_node=num_of_gpu runner.py --test
+CUDA_VISIBLE_DEVICES=gpu_ids python -m torch.distributed.launch --nproc_per_node=num_of_gpu runner.py --test
 ```
 3. Run the following command to evaluate the performance of the model when facing various numbers of input views mentioned in the paper:
 ```
-CUDA_VISIBLE_DEVICES=gpu_ids torchrun --nproc_per_node=num_of_gpu runner.py --batch_test
+CUDA_VISIBLE_DEVICES=gpu_ids python -m torch.distributed.launch --nproc_per_node=num_of_gpu runner.py --batch_test
 ```
 
 
