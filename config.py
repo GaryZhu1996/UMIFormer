@@ -13,8 +13,8 @@ cfg = __C
 __C.DATASETS = edict()
 __C.DATASETS.SHAPENET = edict()
 __C.DATASETS.SHAPENET.TAXONOMY_FILE_PATH = './datasets/ShapeNet.json'
-__C.DATASETS.SHAPENET.RENDERING_PATH = '/home/zzw/datasets/ShapeNet/ShapeNetRendering/%s/%s/rendering/%02d.png'
-__C.DATASETS.SHAPENET.VOXEL_PATH = '/home/zzw/datasets/ShapeNet/ShapeNetVox32/%s/%s/model.binvox'
+__C.DATASETS.SHAPENET.RENDERING_PATH = '/path/to/ShapeNet/dataset/ShapeNetRendering/%s/%s/rendering/%02d.png'
+__C.DATASETS.SHAPENET.VOXEL_PATH = '/path/to/ShapeNet/dataset/ShapeNetVox32/%s/%s/model.binvox'
 
 
 # Dataset
