@@ -112,11 +112,13 @@ CUDA_VISIBLE_DEVICES=gpu_ids python -m torch.distributed.launch --nproc_per_node
 }
 ```
 ```BibTex
-@article{yang2023longrange,
-  title={Long-Range Grouping Transformer for Multi-View 3D Reconstruction}, 
-  author={Yang, Liying and Zhu, Zhenwei and Lin, Xuxin and Nong, Jian and Liang, Yanyan},
-  journal={arXiv preprint arXiv:2308.08724},
-  year={2023}
+@InProceedings{Yang_2023_ICCV,
+    author    = {Yang, Liying and Zhu, Zhenwei and Lin, Xuxin and Nong, Jian and Liang, Yanyan},
+    title     = {Long-Range Grouping Transformer for Multi-View 3D Reconstruction},
+    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+    month     = {October},
+    year      = {2023},
+    pages     = {18257-18267}
 }
 ```
 
